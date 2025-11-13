@@ -36,6 +36,10 @@ body.dark-mode {
   background: linear-gradient(to bottom, #100c10 25%, #6c4e31 100%);
 }
 
+.bars {
+  dispaly : none;
+}
+
 .navmobile {
   background: var(--secondary-color);
   height: 100%;
