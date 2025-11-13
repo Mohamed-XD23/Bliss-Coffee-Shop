@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bliss - Café</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.1/css/all.min.css">
 </head>
 
 <body>
@@ -14,14 +15,37 @@
       <span id="caracter">B</span>
       <h1 id="str">Bliss</h1>
     </div>
-    <ul>
-      <li><a href="#" class="active">Home</a></li>
-      <li><a href="#">Menu</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
+    <ul class="navlinks">
+      <li><a href="#main" class="active">Home</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
+    <div class="utils">
+      <div class="toggle">
+        <i class="fa-solid fa-moon"></i>
+      </div>
+      <div class="bars">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+
+    <div class="navmobile" style="display: none;">
+      <ul>
+        <li><a href="#main" class="active">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
   </header>
-  <section class="main">
+
+  <div class="scrollbtn">
+    <button id="scrollbtn"><i class="fa-solid fa-arrow-up"></i></button>
+  </div>
+
+  <section id="main" class="main">
     <div class="txt">
       <p id="Hello">Wake Up to Bliss — The Best Coffee in Town!</p>
       <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -33,6 +57,7 @@
       <button id="mainbtn" href="#menu">See Our Menu</button>
     </div>
   </section>
+
   <section id="menu">
     <div class="menu">
       <h2>Our Menu</h2>
@@ -62,9 +87,9 @@
     </div>
   </section>
 
-  <section class="about">
+  <section id="about" class="about">
     <div class="abouttxt">
-      <h2>About Us</h2>
+      <h2>About Bliss our coffee shop</h2>
       <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
         eius quod sed fugiat delectus quasi, unde, consectetur autem quas esse
         nihil eligendi odit. Odit deserunt quisquam commodi minus id enim et
@@ -75,7 +100,7 @@
     <img id="coffeecup" src="img/coffee.png" alt="">
   </section>
 
-  <section class="contact">
+  <section id="contact" class="contact">
     <form action="">
       <input type="text" placeholder="Your Name" required />
       <input type="email" placeholder="Your Email" required />
@@ -111,6 +136,8 @@
   <footer>
     <p>&copy; 2024 Bliss Café. All rights reserved.</p>
   </footer>
+
+  <script src="js/script.js"></script>
 
 </body>
 

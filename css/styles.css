@@ -1,6 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
+  --primary-color: #6c4e31;
+  --secondary-color: #ffeac5;
+  --background-color: #603f26;
+  --text-color: #ffdbb5;
+}
+
+body.dark-mode {
   --primary-color: #ffeac5;
   --secondary-color: #6c4e31;
   --background-color: #ffdbb5;
@@ -11,12 +22,18 @@
   margin: 0px;
   padding: 0px;
   border-style: none;
+  box-sizing: border-box;
 }
 
 body {
   font-family: Poppins, Georgia;
   background: linear-gradient(to bottom, #100c10 25%, #ffdbb5 100%);
-  width: 100vw;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+body.dark-mode {
+  background: linear-gradient(to bottom, #100c10 25%, #6c4e31 100%);
 }
 
 header {
@@ -36,6 +53,7 @@ header {
 .active {
   background-color: var(--primary-color);
   color: var(--text-color);
+  transition: all 0.3s ease-in-out;
 }
 
 .logo {
@@ -82,6 +100,7 @@ a {
   font-size: 16px;
   padding: 8px 10px;
   border-radius: 20px;
+  transition: all 0.3s ease-in-out;
 }
 
 header ul li:hover {
@@ -95,22 +114,73 @@ a:hover {
   cursor: pointer;
 }
 
+.utils {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 30px;
+  gap: 20px;
+}
+
+.toggle,
+.bars {
+  font-size: 24px;
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.toggle:hover {
+  transform: scale(1.2);
+}
+
+.bars {
+  display: none;
+}
+
+.scrollbtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+#scrollbtn {
+  background: var(--text-color);
+  color: var(--background-color);
+  font-size: 18px;
+  padding: 12px;
+  border-radius: 50%;
+  box-shadow: 0 0 5px var(--background-color);
+  cursor: pointer;
+}
+
+#scrollbtn:hover {
+  transform: scale(1.07);
+  transition: all 0.5 ease-in-out;
+}
+
+#scrollbtn:active {
+  transform: scale(0.98);
+  transition: all 0.5 ease;
+}
+
 .main {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("/img/coffeeshop-bg.jpg");
   background-size: cover;
   background-position: center;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 80px;
 }
 
 .main p {
-  color: var(--primary-color);
+  color: #e4e4e4;
   margin-bottom: 40px;
   text-align: center;
   font-size: 36px;
@@ -120,8 +190,8 @@ a:hover {
 
 span {
   display: block;
-  width: 50%;
-  color: white;
+  width: 80%;
+  color: #d2d2d2;
   font-size: 18px;
 }
 
@@ -161,8 +231,10 @@ span {
 .menu-items {
   margin: 50px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
 
 .menu h2 {
@@ -182,8 +254,10 @@ span {
   margin: 8px;
   padding: 10px;
   border-radius: 20px;
-  color: var(--primary-color);
+  color: #e4e4e4;
   height: 300px;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .card:hover {
@@ -277,6 +351,7 @@ span {
 
 .abouttxt h2 {
   font-size: 26px;
+  margin-bottom: 25px;
 }
 
 .abouttxt small {
@@ -304,6 +379,7 @@ span {
 
 .contact .infocard {
   background: var(--primary-color);
+  color: var(--text-color);
   margin: 8px;
   padding: 10px 40px 10px 10px;
   border-left: solid 6px var(--secondary-color);
@@ -391,9 +467,153 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  box-shadow: 0 -3px 10px #603f26aa;
 }
 
 footer p {
   font-size: 16px;
   color: var(--primary-color);
+}
+
+@media (max-width: 900px) {
+  .main {
+    /* flex-direction: row; */
+    align-items: center;
+  }
+
+  .txt {
+    width: 65%;
+    margin-left: 0;
+  }
+
+  .main span {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  #mainbtn {
+    margin: 0 0 30px 0;
+    padding: 12px 50px;
+  }
+}
+
+@media (max-width: 860px) {
+  .about {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .abouttxt {
+    width: 80%;
+    margin: 20px 10px;
+    align-items: center;
+  }
+
+  .abouttxt small {
+    width: 100%;
+  }
+
+  #coffeecup {
+    margin: 0 0 25px 0;
+  }
+
+  .contact {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  form {
+    width: 90%;
+    margin: 20px 0;
+  }
+
+  .contactinfo {
+    align-items: center;
+    width: 100%;
+  }
+
+  .contact .infocard {
+    width: 80%;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 700px) {
+  header ul {
+    display: none;
+  }
+
+  .bars {
+    display: block;
+  }
+}
+
+@media (max-width: 650px) {
+  .menu-items {
+    flex-direction: column;
+  }
+
+  .main p {
+    font-size: 28px;
+  }
+
+  .main span {
+    font-size: 16px;
+  }
+
+  .card {
+    width: 95%;
+    height: 220px;
+  }
+
+  .about h2 {
+    font-size: 22px;
+  }
+
+  #str {
+    font-size: 28px;
+  }
+
+  #caracter {
+    font-size: 24px;
+    padding: 2px 12px;
+  }
+}
+
+@media (max-width: 450px) {
+  .utils {
+    gap: 10px;
+    margin-right: 10px;
+  }
+
+  .about h2 {
+    font-size: 16px;
+  }
+
+  .abouttxt small {
+    font-size: 12px;
+  }
+
+  input,
+  textarea,
+  #submitbtn,
+  .contactinfo p {
+    font-size: 10px;
+  }
+
+  .contactinfo h3 {
+    margin-bottom: 5px;
+    font-size: 12px;
+  }
+
+  #scrollbtn {
+    font-size: 12px;
+    padding: 10px;
+  }
+ 
+
+  footer p {
+    font-size: 12px;
+  }
+
 }
