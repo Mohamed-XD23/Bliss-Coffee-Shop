@@ -200,7 +200,7 @@ a:hover {
 
 .main {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("/img/coffeeshop-bg.jpg");
+    url("../img/coffeeshop-bg.jpg");
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -307,7 +307,7 @@ span {
 
 #espresso {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    /* dark overlay */ url("/img/menu/Espresso.png");
+    /* dark overlay */ url("../img/menu/Espresso.png");
   background-size: cover;
   background-position: center;
 }
@@ -315,14 +315,14 @@ span {
 #espresso:hover {
   cursor: pointer;
   background: linear-gradient(rgb(96, 63, 38, 0.6), rgb(96, 63, 38, 0.6)),
-    /* dark overlay */ url("/img/menu/Espresso.png");
+    /* dark overlay */ url("../img/menu/Espresso.png");
   background-size: cover;
   background-position: center;
 }
 
 #cappuccino {
   background: linear-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)),
-    /* dark overlay */ url("/img/menu/Cappuccino.png");
+    /* dark overlay */ url("../img/menu/Cappuccino.png");
   background-size: cover;
   background-position: center;
 }
@@ -330,14 +330,14 @@ span {
 #cappuccino:hover {
   cursor: pointer;
   background: linear-gradient(rgb(96, 63, 38, 0.6), rgb(96, 63, 38, 0.6)),
-    /* dark overlay */ url("/img/menu/Cappuccino.png");
+    /* dark overlay */ url("../img/menu/Cappuccino.png");
   background-size: cover;
   background-position: center;
 }
 
 #latte {
   background: linear-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)),
-    /* dark overlay */ url("/img/menu/Latte.png");
+    /* dark overlay */ url("../img/menu/Latte.png");
   background-size: cover;
   background-position: center;
 }
@@ -345,14 +345,14 @@ span {
 #latte:hover {
   cursor: pointer;
   background: linear-gradient(rgb(96, 63, 38, 0.6), rgb(96, 63, 38, 0.6)),
-    /* dark overlay */ url("/img/menu/Latte.png");
+    /* dark overlay */ url("../img/menu/Latte.png");
   background-size: cover;
   background-position: center;
 }
 
 #tea {
   background: linear-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)),
-    /* dark overlay */ url("/img/menu/Tea.png");
+    /* dark overlay */ url("../img/menu/Tea.png");
   background-size: cover;
   background-position: center;
 }
@@ -360,7 +360,7 @@ span {
 #tea:hover {
   cursor: pointer;
   background: linear-gradient(rgb(96, 63, 38, 0.6), rgb(96, 63, 38, 0.6)),
-    /* dark overlay */ url("/img/menu/Tea.png");
+    /* dark overlay */ url("../img/menu/Tea.png");
   background-size: cover;
   background-position: center;
 }
